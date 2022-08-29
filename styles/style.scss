@@ -97,10 +97,10 @@ body {
 
         &-photo {
             margin: 0 auto;
+            display: block;
             width: 70px;
             height: 70px;
             border-radius: 50%;
-            background: url('../images/Photo.png');
         }
 
         &-data {
@@ -269,27 +269,21 @@ body {
 
             .known-skills {
                 margin-top: 12px;
-
-
             }
 
             .used-skills,
             .known-skills {
                 display: flex;
-                gap: 10px;
+                column-gap: 10px;
+                row-gap: 5px;
+                flex-wrap: wrap;
+                flex-direction: row;
 
                 &__title {
                     font-size: 9px;
                     line-height: 11px;
                     color: #4E4E4E;
                     font-weight: 400;
-                }
-
-                &__items {
-                    display: flex;
-                    column-gap: 10px;
-                    row-gap: 5px;
-                    flex-wrap: wrap;
                 }
             }
         }

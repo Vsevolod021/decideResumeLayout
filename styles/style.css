@@ -93,10 +93,10 @@ body {
 }
 .resume__personal-photo {
   margin: 0 auto;
+  display: block;
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  background: url("../images/Photo.png");
 }
 .resume__personal-data {
   margin-top: 5px;
@@ -239,7 +239,10 @@ body {
 .resume__professional-skills .used-skills,
 .resume__professional-skills .known-skills {
   display: flex;
-  gap: 10px;
+  column-gap: 10px;
+  row-gap: 5px;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 .resume__professional-skills .used-skills__title,
 .resume__professional-skills .known-skills__title {
@@ -247,13 +250,6 @@ body {
   line-height: 11px;
   color: #4E4E4E;
   font-weight: 400;
-}
-.resume__professional-skills .used-skills__items,
-.resume__professional-skills .known-skills__items {
-  display: flex;
-  column-gap: 10px;
-  row-gap: 5px;
-  flex-wrap: wrap;
 }
 .resume__extended {
   padding: 15px 20px;
