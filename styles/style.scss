@@ -318,6 +318,7 @@ body {
                 display: flex;
                 gap: 30px;
                 padding-left: 13px;
+                position: relative;
 
                 &::before {
                     content: '';
@@ -325,7 +326,6 @@ body {
                     width: 5px;
                     height: 5px;
                     left: -3px;
-                    top: 3px;
                     background: #836FFF;
                     border-radius: 50%;
                 }
@@ -422,6 +422,7 @@ body {
                 display: flex;
                 gap: 30px;
                 padding-left: 13px;
+                position: relative;
 
                 &::before {
                     content: '';
@@ -429,7 +430,6 @@ body {
                     width: 5px;
                     height: 5px;
                     left: -3px;
-                    top: 3px;
                     background: #836FFF;
                     border-radius: 50%;
                 }
@@ -514,7 +514,6 @@ body {
                     width: 5px;
                     height: 5px;
                     left: -3px;
-                    top: 3px;
                     background: #836FFF;
                     border-radius: 50%;
                 }

@@ -272,6 +272,7 @@ body {
   display: flex;
   gap: 30px;
   padding-left: 13px;
+  position: relative;
 }
 .resume__extended-commercial .commercial-item::before {
   content: '';
@@ -279,7 +280,6 @@ body {
   width: 5px;
   height: 5px;
   left: -3px;
-  top: 3px;
   background: #836FFF;
   border-radius: 50%;
 }
@@ -351,6 +351,7 @@ body {
   display: flex;
   gap: 30px;
   padding-left: 13px;
+  position: relative;
 }
 .resume__extended-portfolio .portfolio-item-test::before {
   content: '';
@@ -358,7 +359,6 @@ body {
   width: 5px;
   height: 5px;
   left: -3px;
-  top: 3px;
   background: #836FFF;
   border-radius: 50%;
 }
@@ -426,7 +426,6 @@ body {
   width: 5px;
   height: 5px;
   left: -3px;
-  top: 3px;
   background: #836FFF;
   border-radius: 50%;
 }
