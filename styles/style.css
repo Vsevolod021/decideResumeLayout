@@ -175,18 +175,6 @@ body {
 .resume__professional-summary--position {
   color: #313131;
 }
-.resume__professional-summary--position::after {
-  content: '';
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  display: inline-block;
-  background: #646464;
-  position: relative;
-  margin-left: 5px;
-  margin-right: 5px;
-  bottom: 1px;
-}
 .resume__professional-conditions {
   margin-top: 10px;
 }
