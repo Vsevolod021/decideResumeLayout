@@ -31,7 +31,7 @@ body {
   margin: 0;
 }
 
-.resume__extended-commercial .commercial-item__summary--company, .resume__extended-commercial .commercial-item__info--tasks-list, .resume__extended-portfolio .portfolio-item-test__info--descr, .resume__extended-portfolio .portfolio-item-test__info--tasks-list, .resume__extended-portfolio .portfolio-item-pet__info--descr, .resume__extended-about-me--items .about-me-item, .resume__extended-education--university, .resume__extended-education--speciality, .resume__extended-education--disciplines, .resume__extended-courses--content .courses__item {
+.resume__extended-commercial .commercial-item__summary--company, .resume__extended-commercial .commercial-item__info--tasks-list, .resume__extended-portfolio .portfolio-item-test__info--descr, .resume__extended-portfolio .portfolio-item-test__info--tasks-list, .resume__extended-portfolio .portfolio-item-pet__info--descr, .resume__extended-portfolio .portfolio-item-pet__info--tasks-list, .resume__extended-about-me--items .about-me-item, .resume__extended-education--university, .resume__extended-education--speciality, .resume__extended-education--disciplines, .resume__extended-courses--content .courses__item {
   font-size: 8px;
   line-height: 12px;
 }
@@ -479,6 +479,12 @@ body {
 .resume__extended-portfolio .portfolio-item-pet__info--descr > ul {
   text-align: left;
   padding-left: 15px;
+}
+.resume__extended-portfolio .portfolio-item-pet__info--tasks-list {
+  margin-top: 5px;
+  padding-left: 25px;
+  text-align: left;
+  color: #4E4E4E;
 }
 .resume__extended-about-me--items {
   margin-top: 5px;

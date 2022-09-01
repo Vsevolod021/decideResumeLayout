@@ -580,6 +580,14 @@ body {
                         }
                     }
 
+                    &--tasks-list {
+                        margin-top: 5px;
+                        padding-left: 25px;
+                        @extend %default-font;
+                        text-align: left;
+                        color: #4E4E4E;
+                    }
+
                 }
             }
         }
