@@ -506,6 +506,9 @@ body {
   color: #836FFF;
   font-weight: 500;
 }
+.resume__extended-education .university__city {
+  color: #4E4E4E;
+}
 .resume__extended-education--speciality {
   margin-top: 2px;
   color: #4E4E4E;
