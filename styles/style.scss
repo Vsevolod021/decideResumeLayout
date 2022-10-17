@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
 
 @font-face {
     font-family: 'SFProDisplay';
     src: url('../fonts/SFProDisplay-Regular.eot');
-    src: local('☺'), url('fonts/SFProDisplay-Regular.woff') format('woff'), url('fonts/SFProDisplay-Regular.ttf') format('truetype'), url('fonts/SFProDisplay-Regular.svg') format('svg');
+    src: local('☺'), url('../fonts/SFProDisplay-Regular.woff') format('woff'), url('../fonts/SFProDisplay-Regular.ttf') format('truetype'), url('../fonts/SFProDisplay-Regular.svg') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -11,7 +11,7 @@
 @font-face {
     font-family: 'SFProDisplay';
     src: url('../fonts/SFProDisplay-Medium.eot');
-    src: local('☺'), url('fonts/SFProDisplay-Medium.woff') format('woff'), url('fonts/SFProDisplay-Medium.ttf') format('truetype'), url('fonts/SFProDisplay-Medium.svg') format('svg');
+    src: local('☺'), url('../fonts/SFProDisplay-Medium.woff') format('woff'), url('../fonts/SFProDisplay-Medium.ttf') format('truetype'), url('../fonts/SFProDisplay-Medium.svg') format('svg');
     font-weight: 500;
     font-style: normal;
 }
@@ -19,7 +19,7 @@
 @font-face {
     font-family: 'SFProDisplay';
     src: url('../fonts/SFProDisplay-Bold.eot');
-    src: local('☺'), url('fonts/SFProDisplay-Bold.woff') format('woff'), url('fonts/SFProDisplay-Bold.ttf') format('truetype'), url('fonts/SFProDisplay-Bold.svg') format('svg');
+    src: local('☺'), url('../fonts/SFProDisplay-Bold.woff') format('woff'), url('../fonts/SFProDisplay-Bold.ttf') format('truetype'), url('../fonts/SFProDisplay-Bold.svg') format('svg');
     font-weight: 600;
     font-style: normal;
 }
@@ -27,11 +27,11 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    font-family: 'SFProDisplay', sans-serif;
 }
 
 body {
     margin: 0;
+    font-family: 'SFProDisplay', sans-serif;
 }
 
 %default-font {
@@ -90,9 +90,6 @@ body {
         grid-row: 1 / 2;
         width: 164px;
         padding: 10px 20px;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
         gap: 12px;
 
         &-photo {
@@ -101,6 +98,13 @@ body {
             width: 70px;
             height: 70px;
             border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+
+            img {
+                height: 70px;
+            }
         }
 
         &-data {
@@ -135,40 +139,19 @@ body {
         }
 
         &-contacts {
-            padding-left: 10px;
+            padding-left: 0;
             font-size: 8px;
             line-height: 9.5px;
-            font-weight: 500;
             list-style: none;
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 500;
 
             & li {
                 margin-top: 9px;
-
-                &:nth-child(n)::before {
-                    position: relative;
-                    top: 2px;
-                }
-
-                &:nth-child(1)::before {
-                    content: url('../images/phone.svg');
-                    right: 10px;
-                }
-
-                &:nth-child(2)::before {
-                    content: url('../images/Mail.svg');
-                    right: 11px;
-                }
-
-                &:nth-child(3)::before {
-                    content: url('../images/Telegram.svg');
-                    right: 10px;
-                }
-
-                &:nth-child(4)::before {
-                    content: url('../images/GitHub.svg');
-                    right: 10px;
-                }
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 10px;
             }
 
             &--tg>a {

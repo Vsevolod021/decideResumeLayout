@@ -10,10 +10,13 @@
 </head>
 
 <body>
-    <div class="resume">
+    <div class="resume" id="resume">
         <div class="resume__personal resume__block">
             <div class="resume__personal-top">
-                <img class="resume__personal-photo" src="./images/Photo.png" alt="personal-photo"/>
+                <div class="resume__personal-photo">
+                    <img src="./images/arny.jpg" alt="personal-photo"/>
+                </div>
+                
                 <div class="resume__personal-data">
                     <span class="resume__personal-data--name">Тимур Утеев, </span>
                     <span class="resume__personal-data--age">18 лет</span>
@@ -23,10 +26,22 @@
             <div class="resume__personal-bottom">
                 <div class="resume__personal-bottom--title">Контакты</div>
                 <ul class="resume__personal-contacts">
-                    <li class="resume__personal-contacts--phone">+7 (900) 644 13 78</li>
-                    <li class="resume__personal-contacts--mail">timuruteev@gmail.com</li>
-                    <li class="resume__personal-contacts--tg"><a href="">@uteevtimurka</a></li>
-                    <li class="resume__personal-contacts--github"><a href="">github.com/timurutv12</a></li>
+                    <li class="resume__personal-contacts--phone">
+                        <img src="./images/phone.svg" alt="phone">
+                        <span>+7 (900) 644 13 78</span>
+                    </li>
+                    <li class="resume__personal-contacts--mail">
+                        <img src="./images/Mail.svg" alt="mail">
+                        <span>timuruteev@gmail.com</span> 
+                    </li>
+                    <li class="resume__personal-contacts--tg">
+                        <img src="./images/Telegram.svg" alt="tg">
+                        <a href="">@uteevtimurka</a>
+                    </li>
+                    <li class="resume__personal-contacts--github">
+                        <img src="./images/GitHub.svg" alt="github">
+                        <a href="">github.com/timurutv12</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -132,7 +147,8 @@
                     <div class="resume__extended-commercial--item
                                 resume__extended-commercial--item-1
                                 commercial-item
-                                commercial-item-1">
+                                commercial-item-1
+                                resume_separable">
                         <div class="commercial-item__summary commercial-item-1__summary">
                             <div class="commercial-item__summary--company commercial-item-1__summary--company">
                                 Global Cloud Team
@@ -155,8 +171,8 @@
                                 <div class="white-btn">Retofit 2</div>
                                 <div class="white-btn">RxJava 2</div>
                                 <div class="white-btn">Dagger 2</div>
-                                <div class="white-btn">RxJava 2</div>
-                                <div class="white-btn">Dagger 2</div>
+                                <!-- <div class="white-btn">RxJava 2</div>
+                                <div class="white-btn">Dagger 2</div> -->
                             </div>
                         </div>
                         <div class="commercial-item__info commercial-item-1__info">
@@ -177,7 +193,8 @@
                     <div class="resume__extended-commercial--item
                                                     resume__extended-commercial--item-1
                                                     commercial-item
-                                                    commercial-item-2">
+                                                    commercial-item-2
+                                                    resume_separable">
                         <div class="commercial-item__summary commercial-item-2__summary">
                             <div class="commercial-item__summary--company commercial-item-2__summary--company">
                                 Global Cloud Team
@@ -198,8 +215,8 @@
                                 <div class="white-btn">Retofit 2</div>
                                 <div class="white-btn">RxJava 2</div>
                                 <div class="white-btn">Dagger 2</div>
-                                <div class="white-btn">RxJava 2</div>
-                                <div class="white-btn">Dagger 2</div>
+                                <!-- <div class="white-btn">RxJava 2</div>
+                                <div class="white-btn">Dagger 2</div> -->
                             </div>
                         </div>
                         <div class="commercial-item__info commercial-item-2__info">
@@ -225,11 +242,12 @@
                 <div class="resume__extended-portfolio--items">
 
                     <!-- Item блока портфолио: тестовое задание -->
-
+<!-- 
                     <div class="resume__extended-portfolio--item-test 
                                 resume__extended-portfolio--item-test-1
                                 portfolio-item-test
-                                portfolio-item-test-1">
+                                portfolio-item-test-1
+                                resume_separable">
                         <div class="portfolio-item-test__summary portfolio-item-test-1__summary">
                             <div
                                 class="portfolio-item-test__summary--project-name portfolio-item-test-1__summary--project-name">
@@ -275,14 +293,15 @@
                                 </li>
                             </ul>
                         </div>
-                    </div> 
+                    </div>  -->
 
                     <!-- Item блока портфолио: тестовое задание -->
 
                     <div class="resume__extended-portfolio--item-test 
                                                     resume__extended-portfolio--item-test-2
                                                     portfolio-item-test
-                                                    portfolio-item-test-2">
+                                                    portfolio-item-test-2
+                                                    resume_separable">
                         <div class="portfolio-item-test__summary portfolio-item-test-2__summary">
                             <div class="portfolio-item-test__summary--project-name portfolio-item-test-2__summary--project-name">
                                 Приложение Quiz
@@ -306,22 +325,16 @@
                                 Описание:
                             </div>
                             <div class="portfolio-item-test__info--descr portfolio-item-test-2__info--descr">
-                                Приложение, которое позволяет пользователю пройти тестирование по вопросам
-                                с заданными вариантами ответа, проверяет ответы и показывает пользователю результат.
+                                Ну реально крутое АПИ
                             </div>
                             <div class="portfolio-item-test__info--title portfolio-item-test-2__info--title">
                                 Выполненные задачи:
                             </div>
                             <ul class="portfolio-item-test__info--tasks-list portfolio-item-test-2__info--tasks-list">
-                                <li>Приложение может быть реализована на PHP (Laravel), либо Python (Django)</li>
-                                <li>Не нужно форкать наш репозиторий. Лучше спульте код, удалите гит файлы, создайте
-                                    свой репозиторий.</li>
-                                <li>Для проверки правильности расчета результата тестирования рекомендуетс использовать
-                                    тесты.</li>
-                                <li>Заготовки проектов уже обернуты в докер, можем редактировать докерфайлы, добавляя
-                                    компоненты.</li>
-                                <li>Для реализации фронтенда вы можете использовать любой шаблонизатор на ваш выбор.
-                                </li>
+                                <li>тест</li>
+                                <li>тест</li>
+                                <li>тест</li>
+                                <li>тест</li>
                             </ul>
                         </div>
                     </div>
@@ -331,7 +344,8 @@
                     <div class="resume__extended-portfolio--item-pet 
                                         resume__extended-portfolio--item-pet-1
                                         portfolio-item-pet
-                                        portfolio-item-pet-1">
+                                        portfolio-item-pet-1
+                                        resume_separable">
                         <div class="portfolio-item-pet__summary portfolio-item-pet-1__summary">
                             <div
                                 class="portfolio-item-pet__summary--project-name portfolio-item-pet-1__summary--project-name">
@@ -357,31 +371,28 @@
                                 class="portfolio-item-pet__summary--technologies portfolio-item-pet-1__summary--technologies">
                                 <div class="white-btn">Retofit 2</div>
                                 <div class="white-btn">RxJava 2</div>
-                                <div class="white-btn">Dagger 2</div>
+                                <!-- <div class="white-btn">Dagger 2</div>
                                 <div class="white-btn">RxJava 2</div>
-                                <div class="white-btn">Dagger 2</div>
+                                <div class="white-btn">Dagger 2</div> -->
                             </div>
                         </div>
                         <div class="portfolio-item-pet__info portfolio-item-pet-1__info">
                             <div class="portfolio-item-pet__info--title portfolio-item-pet-1__info--title">Описание:
                             </div>
                             <div class="portfolio-item-pet__info--descr portfolio-item-pet-1__info--descr">
-                                Приложение для подбора фильмов с детальной информацией.<br>
-                                Приложение является pet-проектом, написано с обучающей целью.
+                                Приложение для подбора фильмов с детальной информацией.
+                                <!-- <br>Приложение является pet-проектом, написано с обучающей целью. -->
                             </div>
                             <div class="portfolio-item-pet__info--title portfolio-item-pet-1__info--title">
                                 Выполненные задачи:
                             </div>
                             <ul class="portfolio-item-pet__info--tasks-list portfolio-item-pet-1__info--tasks-list">
-                                <li>Приложение может быть реализована на PHP (Laravel), либо Python (Django)</li>
-                                <li>Не нужно форкать наш репозиторий. Лучше спульте код, удалите гит файлы, создайте
-                                    свой репозиторий.</li>
-                                <li>Для проверки правильности расчета результата тестирования рекомендуетс использовать
-                                    тесты.</li>
-                                <li>Заготовки проектов уже обернуты в докер, можем редактировать докерфайлы, добавляя
-                                    компоненты.</li>
-                                <li>Для реализации фронтенда вы можете использовать любой шаблонизатор на ваш выбор.
-                                </li>
+                                <li>тест</li>
+                                <li>тест</li>
+                                <li>тест</li>
+                                <li>тест</li>
+                                <li>тест</li>
+                                <li>тест</li>
                             </ul>
                         </div>
                     </div>
@@ -391,7 +402,7 @@
 
             <!-- Блок: о себе -->
 
-            <div class="resume__extended-about-me">
+            <div class="resume__extended-about-me resume_separable">
                 <div class="resume__extended-about-me--title">Немного о себе:</div>
                 <div class="resume__extended-about-me--items">
                     <div class="resume__extended-about-me--item 
@@ -446,7 +457,7 @@
 
             <!-- Блок: образование -->
 
-            <div class="resume__extended-education">
+            <div class="resume__extended-education resume_separable">
                 <div class="resume__extended-education--title">Образование:</div>
                 <div class="resume__extended-education--university university">
                     <span class="university__extend">Казанский Национальный Исследовательский Технический Университет им. А.Н. Туполева</span> - 
@@ -461,8 +472,8 @@
             </div>
 
             <!-- Блок: дополнительное образование -->
-
-            <div class="resume__extended-courses">
+            
+            <div class="resume__extended-courses resume_separable">
                 <div class="resume__extended-courses--title">Курсы и дополнительное образование:</div>
                 <div class="resume__extended-courses--content courses">
                     <div class="courses__item courses__item-1">Udemy, 2022</div>
@@ -478,7 +489,6 @@
                     </div>
                 </div>
             </div>
-            
         </div>
     </div>
 </body>
