@@ -36,7 +36,7 @@ body {
   line-height: 12px;
 }
 
-.resume__extended-commercial-title, .resume__extended-portfolio-items .portfolio-item:nth-child(1)::after, .resume__extended-about-me-title, .resume__extended-education-title, .resume__extended-courses-title {
+.resume__extended-commercial-title, .resume__extended-portfolio-items .portfolio-item:nth-child(1) > .portfolio-item__summary::after, .resume__extended-about-me-title, .resume__extended-education-title, .resume__extended-courses-title {
   font-size: 10px;
   line-height: 12px;
   font-weight: 600;
@@ -332,18 +332,18 @@ body {
 .resume__extended-portfolio-items .portfolio-item {
   padding-top: 40px;
 }
-.resume__extended-portfolio-items .portfolio-item :nth-child(1) {
+.resume__extended-portfolio-items .portfolio-item:nth-child(1) {
   page-break-after: auto;
   border-left: none;
 }
-.resume__extended-portfolio-items .portfolio-item:nth-child(1)::after {
+.resume__extended-portfolio-items .portfolio-item:nth-child(1) > .portfolio-item__summary::after {
   content: 'Портфолио';
   position: absolute;
   left: -1px;
-  top: 0;
+  top: 0px;
   background-color: white;
   height: 29px;
-  z-index: 3;
+  z-index: 3000;
   page-break-inside: avoid;
   page-break-before: always;
   padding-top: 10px;
@@ -580,14 +580,16 @@ body {
 }
 
 .separator {
-  position: absolute;
-  top: calc(100vh - 10px);
+  page-break-before: always;
+  position: relative;
+  top: -15px;
   left: 50%;
   transform: translateX(-50%);
   width: 595px;
-  height: 20px;
+  height: 30px;
   background-color: #E5E5E5;
   overflow: hidden;
+  z-index: 100;
 }
 
 .separator::after {
@@ -610,14 +612,6 @@ body {
   height: 10px;
   background-color: white;
   border-radius: 5px;
-}
-
-@page {
-  @top-center {
-    content: 'hello';
-    color: black;
-    font-size: 40px;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

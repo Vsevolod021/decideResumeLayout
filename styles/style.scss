@@ -401,24 +401,27 @@ body {
                     padding-top: 40px;
                 }
 
-                .portfolio-item :nth-child(1) {
+                .portfolio-item:nth-child(1) {
                     page-break-after: auto;
                     border-left: none;
-                }
 
-                .portfolio-item:nth-child(1)::after {
-                    content: 'Портфолио';
-                    @extend %extended-titles-font;
-                    position: absolute;
-                    left: -1px;
-                    top: 0;
-                    background-color: white;
-                    height: 29px;
-                    z-index: 3;
-                    page-break-inside: avoid;
-                    page-break-before: always;
-                    padding-top: 10px;
+                    & > .portfolio-item__summary::after {
+                        content: 'Портфолио';
+                        @extend %extended-titles-font;
+                        position: absolute;
+                        left: -1px;
+                        top: 0px;
+                        background-color: white;
+                        height: 29px;
+                        z-index: 3000;
+                        page-break-inside: avoid;
+                        page-break-before: always;
+                        padding-top: 10px;
+                    }   
                 }
+                
+
+                
             }
 
             // .portfolio-item
@@ -743,14 +746,16 @@ body {
 
 
 .separator {
-    position: absolute;
-    top: calc(100vh - 10px);
+    page-break-before: always;
+    position: relative;
+    top: -15px;
     left: 50%;
     transform: translateX(-50%);
     width: 595px;
-    height: 20px;
+    height: 30px;
     background-color: #E5E5E5;
     overflow: hidden;
+    z-index: 100;
 }
 
 .separator::after {
@@ -775,11 +780,3 @@ body {
     border-radius: 5px;
 }
 
-
-@page {
-    @top-center {
-        content: 'hello';
-        color: black;
-        font-size: 40px;
-    }
-}
