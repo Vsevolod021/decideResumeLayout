@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
 @font-face {
   font-family: 'SFProDisplay';
   src: url("../fonts/SFProDisplay-Regular.eot");
@@ -31,12 +30,12 @@ body {
   font-family: 'SFProDisplay', sans-serif;
 }
 
-.resume__extended-commercial .commercial-item__summary-company, .resume__extended-commercial .commercial-item__info-tasks-list, .resume__extended-portfolio .portfolio-item-test__info-descr, .resume__extended-portfolio .portfolio-item-test__info-tasks-list, .resume__extended-portfolio .portfolio-item-pet__info-descr, .resume__extended-portfolio .portfolio-item-pet__info-tasks-list, .resume__extended-about-me-items .about-me-item, .resume__extended-education .education-item, .resume__extended-courses .courses-item, .resume__extended-courses .courses-item__block {
+.resume__extended-commercial .commercial-item__summary-company, .resume__extended-commercial .commercial-item__info-tasks-list, .resume__extended-portfolio .portfolio-item-test__info-descr, .resume__extended-portfolio .portfolio-item-test__info-tasks-list, .resume__extended-portfolio .portfolio-item-pet__info-descr, .resume__extended-portfolio .portfolio-item-pet__info-tasks-list, .resume__extended-about-me-items .about-me-item, .resume__extended-education-items .education-item, .resume__extended-courses-items .courses-item, .resume__extended-courses-items .courses-item__block {
   font-size: 8px;
   line-height: 12px;
 }
 
-.resume__extended-commercial-title, .resume__extended-portfolio-items .portfolio-item:nth-child(1) > .portfolio-item__summary::after, .resume__extended-about-me-title, .resume__extended-education-title, .resume__extended-courses-title {
+.resume__extended-commercial-title, .resume__extended-portfolio-items .portfolio-item:nth-child(1)::after, .resume__extended-about-me-title, .resume__extended-about-me-items .about-me-item:nth-child(1)::after, .resume__extended-education-title, .resume__extended-education-items .education-item:nth-child(1)::after, .resume__extended-courses-title, .resume__extended-courses-items .courses-item:nth-child(1)::after {
   font-size: 10px;
   line-height: 12px;
   font-weight: 600;
@@ -91,6 +90,7 @@ body {
   width: 164px;
   padding: 10px 20px;
   gap: 12px;
+  position: relative;
 }
 .resume__personal-photo {
   margin: 0 auto;
@@ -133,7 +133,6 @@ body {
   font-size: 8px;
   line-height: 9.5px;
   list-style: none;
-  font-family: 'Raleway', sans-serif;
   font-weight: 500;
 }
 .resume__personal-contacts li {
@@ -154,17 +153,36 @@ body {
   width: 405px;
   grid-column: 2 / 3;
   grid-row: 1 / 2;
+  position: relative;
 }
 .resume__professional-summary {
   font-size: 12px;
   line-height: 14px;
   font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .resume__professional-summary-level, .resume__professional-summary-experience {
   color: #646464;
 }
 .resume__professional-summary-position {
   color: #313131;
+}
+.resume__professional-summary .water-mark {
+  text-align: end;
+  flex: 1 1 30%;
+}
+.resume__professional-summary .water-mark > span {
+  display: block;
+  font-size: 7px;
+  line-height: 8px;
+  font-weight: 300;
+  color: #4E4E4E;
+}
+.resume__professional-summary .water-mark > span > a {
+  color: #836FFF;
+  text-decoration: underline;
 }
 .resume__professional-conditions {
   margin-top: 10px;
@@ -246,6 +264,7 @@ body {
   gap: 30px;
   padding-left: 13px;
   position: relative;
+  z-index: 500;
   margin-top: 0;
   padding-top: 20px;
 }
@@ -330,23 +349,23 @@ body {
   border-left: 1px dashed #836FFF;
 }
 .resume__extended-portfolio-items .portfolio-item {
-  padding-top: 40px;
+  padding-top: 48px;
 }
 .resume__extended-portfolio-items .portfolio-item:nth-child(1) {
   page-break-after: auto;
   border-left: none;
 }
-.resume__extended-portfolio-items .portfolio-item:nth-child(1) > .portfolio-item__summary::after {
-  content: 'Портфолио';
+.resume__extended-portfolio-items .portfolio-item:nth-child(1)::after {
+  content: 'Портфолио:';
   position: absolute;
-  left: -1px;
+  left: -2px;
   top: 0px;
   background-color: white;
   height: 29px;
-  z-index: 3000;
+  z-index: 30;
   page-break-inside: avoid;
   page-break-before: always;
-  padding-top: 10px;
+  padding-top: 18px;
 }
 .resume__extended-portfolio .portfolio-item-test {
   display: flex;
@@ -366,6 +385,8 @@ body {
 .resume__extended-portfolio .portfolio-item-test__summary {
   min-width: 150px;
   max-width: 150px;
+  position: static;
+  z-index: 500;
 }
 .resume__extended-portfolio .portfolio-item-test__summary-project-name {
   font-size: 8px;
@@ -396,6 +417,10 @@ body {
   flex-wrap: wrap;
   column-gap: 10px;
   row-gap: 5px;
+}
+.resume__extended-portfolio .portfolio-item-test__info {
+  position: static;
+  z-index: 500;
 }
 .resume__extended-portfolio .portfolio-item-test__info-title {
   font-size: 10px;
@@ -505,14 +530,17 @@ body {
   padding-top: 20px;
   display: block;
 }
+.resume__extended-about-me-title {
+  visibility: hidden;
+}
 .resume__extended-about-me-items {
+  position: relative;
   margin-top: 5px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  z-index: 500;
 }
 .resume__extended-about-me-items .about-me-item {
   color: #4E4E4E;
+  padding-top: 10px;
 }
 .resume__extended-about-me-items .about-me-item__quest {
   font-weight: 300;
@@ -520,52 +548,87 @@ body {
 .resume__extended-about-me-items .about-me-item__ans {
   font-weight: 500;
 }
+.resume__extended-about-me-items .about-me-item:nth-child(1) {
+  page-break-after: auto;
+  border-left: none;
+  padding-top: 0;
+}
+.resume__extended-about-me-items .about-me-item:nth-child(1)::after {
+  content: 'Немного о себе:';
+  position: absolute;
+  left: -2px;
+  top: -17px;
+  z-index: 30;
+  page-break-inside: avoid;
+  page-break-before: always;
+}
 .resume__extended-education {
   padding-top: 20px;
   display: block;
 }
-.resume__extended-education-items {
-  margin-top: 5px;
+.resume__extended-education-title {
+  visibility: hidden;
 }
-.resume__extended-education .education-item {
+.resume__extended-education-items {
+  position: relative;
+  margin-top: 5px;
+  z-index: 500;
+}
+.resume__extended-education-items .education-item {
   padding-top: 20px;
   display: flex;
   font-weight: 400;
 }
-.resume__extended-education .education-item__degree-info, .resume__extended-education .education-item__speciality-info {
+.resume__extended-education-items .education-item__degree-info, .resume__extended-education-items .education-item__speciality-info {
   display: flex;
   flex-direction: column;
   gap: 3px;
   justify-content: center;
 }
-.resume__extended-education .education-item .degree-info {
+.resume__extended-education-items .education-item .degree-info {
   color: #313131;
   flex-basis: 120px;
 }
-.resume__extended-education .education-item .degree-info__level {
+.resume__extended-education-items .education-item .degree-info__level {
   font-weight: 700;
 }
-.resume__extended-education .education-item .speciality-info {
+.resume__extended-education-items .education-item .speciality-info {
   color: #4E4E4E;
 }
-.resume__extended-education .education-item .speciality-info__university {
+.resume__extended-education-items .education-item .speciality-info__university {
   color: #836FFF;
   font-weight: 500;
 }
-.resume__extended-education .education-item .speciality-info__speciality {
+.resume__extended-education-items .education-item .speciality-info__speciality {
   font-weight: 500;
 }
-.resume__extended-education .education-item:first-child {
+.resume__extended-education-items .education-item:nth-child(1) {
+  page-break-after: auto;
+  border-left: none;
   padding-top: 0;
+}
+.resume__extended-education-items .education-item:nth-child(1)::after {
+  content: 'Образование:';
+  position: absolute;
+  left: -2px;
+  top: -17px;
+  z-index: 30;
+  page-break-inside: avoid;
+  page-break-before: always;
 }
 .resume__extended-courses {
   padding-top: 20px;
   display: block;
 }
+.resume__extended-courses-title {
+  visibility: hidden;
+}
 .resume__extended-courses-items {
   margin-top: 5px;
+  position: relative;
+  z-index: 500;
 }
-.resume__extended-courses .courses-item {
+.resume__extended-courses-items .courses-item {
   padding-top: 20px;
   display: flex;
   font-weight: 500;
@@ -574,36 +637,47 @@ body {
   justify-content: space-between;
   gap: 0;
 }
-.resume__extended-courses .courses-item__block {
+.resume__extended-courses-items .courses-item__block {
   color: #4E4E4E;
 }
-.resume__extended-courses .courses-item__block-1 {
+.resume__extended-courses-items .courses-item__block-1 {
   grid-column: 1 / 3;
   padding-bottom: 2px;
 }
-.resume__extended-courses .courses-item__block-1 span {
+.resume__extended-courses-items .courses-item__block-1 span {
   color: #836FFF;
 }
-.resume__extended-courses .courses-item__block-2 {
+.resume__extended-courses-items .courses-item__block-2 {
   padding-bottom: 12px;
 }
-.resume__extended-courses .courses-item__block-3 {
+.resume__extended-courses-items .courses-item__block-3 {
   align-self: flex-end;
 }
-.resume__extended-courses .courses-item__block-4 {
+.resume__extended-courses-items .courses-item__block-4 {
   font-weight: 400;
 }
-.resume__extended-courses .courses-item__block-5 {
+.resume__extended-courses-items .courses-item__block-5 {
   text-overflow: ellipsis;
   overflow: hidden;
   color: #836FFF;
 }
-.resume__extended-courses .courses-item__block-5 > a {
+.resume__extended-courses-items .courses-item__block-5 > a {
   text-overflow: ellipsis;
   color: #836FFF;
 }
-.resume__extended-courses .courses-item:first-child {
+.resume__extended-courses-items .courses-item:nth-child(1) {
+  page-break-after: auto;
+  border-left: none;
   padding-top: 0;
+}
+.resume__extended-courses-items .courses-item:nth-child(1)::after {
+  content: 'Курсы и дополнительное образование:';
+  position: absolute;
+  left: -2px;
+  top: -17px;
+  z-index: 30;
+  page-break-inside: avoid;
+  page-break-before: always;
 }
 .resume_separable {
   page-break-inside: avoid;
@@ -611,13 +685,13 @@ body {
 
 .separator {
   page-break-before: always;
-  position: relative;
-  top: -15px;
+  position: absolute;
+  top: 827px;
   left: 50%;
   transform: translateX(-50%);
   width: 595px;
   height: 30px;
-  background-color: #E5E5E5;
+  background: #ebedef;
   overflow: hidden;
   z-index: 100;
 }
@@ -642,6 +716,7 @@ body {
   height: 10px;
   background-color: white;
   border-radius: 5px;
+  z-index: -1;
 }
 
 /*# sourceMappingURL=style.css.map */
